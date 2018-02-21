@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{21CF924D-FAC9-49FE-9F3B-E45D9D4A9498}|">
+  <MonoDevelop.Ide.ItemProperties.assign2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assign2/default.aspx">
+    <Files>
+      <File FileName="assign2/default.aspx" Line="4" Column="44" />
+      <File FileName="assign2/default.aspx.cs" Line="11" Column="6" />
+      <File FileName="assign2/Web.config" Line="21" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

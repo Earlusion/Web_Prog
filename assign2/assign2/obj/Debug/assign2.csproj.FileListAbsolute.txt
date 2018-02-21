@@ -1,0 +1,5 @@
+/Users/marko/Desktop/Web Prog/assign2/assign2/bin/assign2.dll
+/Users/marko/Desktop/Web Prog/assign2/assign2/bin/assign2.pdb
+/Users/marko/Desktop/Web Prog/assign2/assign2/obj/Debug/assign2.csproj.CoreCompileInputs.cache
+/Users/marko/Desktop/Web Prog/assign2/assign2/obj/Debug/assign2.dll
+/Users/marko/Desktop/Web Prog/assign2/assign2/obj/Debug/assign2.pdb

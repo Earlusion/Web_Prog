@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<p>Home > HW1 > myXML.xml</p>
+
+<Playlist>
+  <Song>
+    <Title>Chicken Soup</Title>
+
+    <Artist>Skrillex x Habstrakt</Artist>
+    
+    <Genre>House</Genre>
+
+    <BPM>120</BPM>
+  </Song>
+
+  <Song>
+    <Title>Good Morning</Title>
+
+    <Artist>Kanye West</Artist>
+
+    <Genre>Hip-Hop/Rap</Genre>
+
+    <BPM>75</BPM>
+  </Song>
+
+  <Song>
+    <Title>Headcrush</Title>
+
+    <Artist>Badklaat</Artist>
+
+    <Genre>Dubstep</Genre>
+
+    <BPM>130</BPM>
+  </Song>
+</Playlist>

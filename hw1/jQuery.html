@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Example</title>
+
+    <script src="jquery-1.11.2.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#btnTot").click(function(){
+
+                var tot = 0.0;
+                var msg = "";
+
+                var picked = [];
+                var picked_title = [];
+
+                $("#books option:selected").each(function(){
+                    picked_title.push($(this).text());
+                    picked.push($(this).val());
+                    tot += parseFloat($(this).val());
+                });
+
+                for(var i = 0; i < picked.length; i++){
+                    msg += "$" + picked[i] + " - " + picked_title[i] + "\n";
+                }
+
+                var b_in = $("#book_name").val();
+                var p_in = parseFloat($("#book_price").val());
+
+                if( !isNaN(p_in) && b_in != ""){
+                    tot += p_in;
+                    msg += "$" + p_in.toFixed(2) + " - " + b_in + " (user specified)\n";
+                }
+
+                var c_type = $("input[name='customer_type']:checked").val();
+                var gov = false;
+
+                if(c_type == 0.1){
+                    msg += "Government Customer\n";
+                    gov = true;
+                }
+
+                else{
+                    msg += "General Customer\n";
+                }
+
+                var o_options = [];
+                $("input[name='order_option']:checked").each(function(){
+                    o_options.push($(this).val());
+                });
+
+                for(var i = 0; i < o_options.length; i++){
+                    tot += parseFloat(o_options[i]);
+
+                    if(o_options[i] == 10.00){
+                        msg += "$10.00 - Rush Order\n";
+                    }
+
+                    else{
+                        msg += "$5.00 - Gift Wrap\n";
+                    }
+                }
+
+                var ship_to = $("#state option:selected").text();
+                var ship_p = parseFloat($("#state option:selected").val());
+
+                tot += ship_p;
+                msg += "$" + ship_p.toFixed(2) + " - Ship to " + ship_to + "\n";
+
+                msg += "---------------\n";
+
+                if(gov){
+                    msg+= "Subtotal: $" + tot.toFixed(2) + "\n";
+                    msg += "Discount (10%): $" + (0.1 * tot).toFixed(2) + "\n";
+                    tot -= (0.1 * tot);
+                }
+
+                msg += "Total: $" + tot.toFixed(2);
+
+                $("#invoice").val(msg);
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 141px;
+        }
+        .auto-style3 {
+            width: 141px;
+            height: 55px;
+        }
+        .auto-style4 {
+            height: 55px;
+        }
+        .auto-style5 {
+            width: 141px;
+            height: 163px;
+        }
+        .auto-style6 {
+            height: 163px;
+        }
+    </style>
+
+</head>
+
+<body style="font-family: Verdana">
+    <p>Home ><a href="default.htm">HW 1</a>> jQuery Example</p>
+
+    <h1>Book Order Form</h1>
+
+    <form id="transaction">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+                    <span style="font-weight:bold; text-align:justify">
+                        Select Books
+                        <br />
+                        and/or Supply
+                        <br />
+                        Book title and
+                        <br />
+                        price
+                    </span>
+                </td>
+
+                <td>
+                    <select id="books" multiple>
+                        <option value="20.00">Walden Pond</option>
+                        <option value="15.00">Zen and the Art...</option>
+                        <option value="8.00">The Razor's Edge</option>
+                        <option value="15.00">The Poisonwood Bible</option>
+                        <option value="10.00">Wuthering Heights</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3"></td>
+                <td class="auto-style4">
+                    Book
+                    <input id="book_name" type="text" style="width: 180px" />
+
+                    Price
+                    <input id="book_price" type="number"  style="width: 180px" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" ; style="font-weight:bold">Options</td>
+                <td>
+                    <input id="rush" type="checkbox" name="order_option" value="10.00" />Rush Order
+
+                    <input id="wrap" type="checkbox" name="order_option" value="5.00" />Gift Wrap
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" ; style="font-weight:bold">Customer Type</td>
+                <td>
+                    <input type="radio" name="customer_type" value="1" checked="checked" />General
+
+                    <input id="gov" type="radio" name="customer_type" value="0.1" />Government
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" ; style="font-weight:bold">Ship To</td>
+                <td>
+                    <select name="state" id="state">
+                        <option value="5.00" selected="selected">NY</option>
+                        <option value="7.00">CA</option>
+                        <option value="3.00">SC</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+
+                <td>Purchase Details:</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <input id="btnTot" type="button" value="Purchase" onclick="priceTotal()">
+                </td>
+                <td class="auto-style6">
+                    <textarea id="invoice" rows="8" cols="74"></textarea>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

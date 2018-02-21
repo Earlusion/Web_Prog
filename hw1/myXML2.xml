@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<?xml-stylesheet type="text/xsl" href="myXSLT2.xsl" ?>
+
+<Playlist>
+  <Song>
+    <Title>Please</Title>
+
+    <Artist>U2</Artist>
+    
+    <Genre>Rock</Genre>
+
+    <BPM>134</BPM>
+  </Song>
+
+  <Song>
+    <Title>Give</Title>
+
+    <Artist>LeAnn Rimes</Artist>
+
+    <Genre>Country</Genre>
+
+    <BPM>139</BPM>
+  </Song>
+
+  <Song>
+    <Title>Me</Title>
+
+    <Artist>The 1975</Artist>
+
+    <Genre>Indie Rock</Genre>
+
+    <BPM>115</BPM>
+  </Song>
+
+  <Song>
+    <Title>100%</Title>
+
+    <Artist>Mariah Carey</Artist>
+
+    <Genre>R&amp;B</Genre>
+
+    <BPM>128</BPM>
+  </Song>
+
+  <Song>
+    <Title>Pretty Please</Title>
+
+    <Artist>The Triplett Twins</Artist>
+
+    <Genre>R&amp;B/Soul</Genre>
+
+    <BPM>100</BPM>
+  </Song>
+
+  <Song>
+    <Title>We&apos;re All in This Together</Title>
+
+    <Artist>High School Musical Cast</Artist>
+
+    <Genre>Pop</Genre>
+
+    <BPM>116</BPM>
+  </Song>
+
+  <Song>
+    <Title>Leave No Man Behind</Title>
+
+    <Artist>Hans Zimmer</Artist>
+
+    <Genre>Film Score</Genre>
+
+    <BPM>84</BPM>
+  </Song>
+
+  <Song>
+    <Title>So Help Me God</Title>
+
+    <Artist>Andrew Luce</Artist>
+
+    <Genre>Trap</Genre>
+
+    <BPM>132</BPM>
+  </Song>
+</Playlist>
